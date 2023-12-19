@@ -75,7 +75,6 @@ class Base(pl.LightningModule):
 
     def encode(self, x):
         # We treat the first half of output as mu, and the rest as logvar
-        x = x
         h = self.encoder_net(x)
         return h[:, :h.shape[1] // 2], h[:, h.shape[1] // 2:]
 

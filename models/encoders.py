@@ -67,7 +67,7 @@ class FC_encoder_cifar(nn.Module):
         batch_size = x.shape[0]
         x = x.view(batch_size, -1)
         return self.net(x)
-
+    
 
 def get_encoder(net_type, act_func, hidden_dim, dataset, shape):
     if str(dataset).lower().find('mni') > -1:
